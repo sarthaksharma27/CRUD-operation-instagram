@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/new.css">
+</head>
+<body>
+    <h1>Edit the Post</h1>
+    <form class="form" action="/instagram/<%= user.id %>?_method=PATCH" method="post">
+            <input class="input" type="text" id="username" name="username" placeholder="Enter your username" value="<%= user.username %>">
+            <input class="input" type="text" id="photo" name="photo" placeholder="Enter photo link" value="<%= user.photo %>">
+            <input class="input" type="text" id="title" name="title" placeholder="Enter title" value="<%= user.title %>">
+        <button type="submit">Edit Post</button>
+    </form>
+</body>
+</html>
